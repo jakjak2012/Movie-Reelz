@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Noto+Sans&display=swap" rel="stylesheet">
+    <title>Home Page</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <h3>Home</h3>
+        <a style="text-decoration: none" href="/sign_in"><h3 style="color: black;">Login</h3></a>
+        <a style="text-decoration: none" href="/dashboard"><h1 style="color: black;">Movie Database</h1></a>
+        <a style="text-decoration: none" href="/show_favorite"><h3 style="color: black;">Favorites</h3></a>
+        <a style="text-decoration: none" href="/logout"><h3 style="color: black;">Sign Out</h3></a>
+    </nav>
+    <div id="background_image">
+        <div class="wrapper">
+            <input type="text" class="input" 
+            placeholder="Search for movie">
+            <div class="searchbtn"><i class="fas fa-search"><img src="{{ url_for('static', filename= 'search_img.jpg') }}" alt="searchbutton"></i></div>
+        </div>
+    </div>
+</body>
+
+</html>

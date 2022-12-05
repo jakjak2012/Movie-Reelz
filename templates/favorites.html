@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Noto+Sans&display=swap" rel="stylesheet">
+    <title>Results</title>
+</head>
+<body>
+    <style>
+        div.a {
+            text-align: center;
+        }
+    </style>
+    <div class="a"><h1>Results page for Users favorite movies</h1></div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Title</th>
+                <th scope="col">Imdb Rating</th>
+                <th scope="col">Release Date</th>
+                <th scope="col">Runtime</th>
+                <th scope="col">Genre(s)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for f in favorites %}
+            <tr>
+                <td>{{f.movie.imdb_id}}</td>
+                <td>{{f.movie.title}}</td>
+                <td>{{f.movie.imdb_rating}}</td>
+                <td>{{f.movie.release_date}}</td>
+                <td>{{f.movie.runtime}}</td>
+                <td>{{f.movie.genre}}</td>
+            </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+</body>
+</html>
